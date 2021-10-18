@@ -8,6 +8,7 @@ import Login from './component/Login/Login/Login';
 import Header from './component/Shared/Header/Header';
 import Register from './component/Register/Register';
 import AuthProvider from './Context/AuthProvider';
+import Doctors from './component/Doctors/Doctors';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route path="/services">
             <Services></Services>
+          </Route>
+          <Route path="/doctors">
+            <Doctors></Doctors>
           </Route>
           <Route  path="*">
             <NotFound></NotFound>

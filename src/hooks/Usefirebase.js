@@ -21,7 +21,7 @@ const useFirebase = () => {
     }
 
 
-   const handleRegister = (email, password) => {
+   const handleChangeRegister = (email, password) => {
         createUserWithEmailAndPassword(auth,email,password)
         .then((result) => {
             console.log(result.user)
@@ -41,20 +41,23 @@ const useFirebase = () => {
 
     useEffect(() => {
         const auth = getAuth();
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-     setUser(user)
+     const unsubscribed = onAuthStateChanged(auth, (user) => {
+        if (user) {
+        setUser(user)
     
-     } 
+        } else{
+            setUser()
+        } 
+
         });
+        return() => unsubscribed
 
      },[])
         return{
             user,
             singInUsingGoogle, 
             logOut,
-            handleRegister
-
+            handleChangeRegister
         }
 
 }

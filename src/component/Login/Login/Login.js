@@ -6,7 +6,7 @@ import './Login.css'
 
 const Login = () => {
     const { singInUsingGoogle} = useAuth()
-    const {handleRegister} = useFirebase()
+    const {handleChangeRegister} = useFirebase()
 
 
     const [email,setEmail] = useState("")
@@ -21,13 +21,15 @@ const Login = () => {
     }
 
 
-
+    const handleRegistion = e => {
+        handleChangeRegister(email,password)
+    }
 
 
     return (
         <div className="login-from">
            <div>
-               <form onSubmit="">
+               <form onSubmit={handleRegistion}>
                    <h2>Please Login</h2>
                    <label htmlFor="email">Email:</label>
                    <input 
@@ -46,7 +48,7 @@ const Login = () => {
                     required
                     placeholder="password"/>
                    <br /><br />
-                   <input onClick={handleRegister} type="submit" value="Submit" />
+                   <input onClick={handleRegistion} type="submit" value="Submit" />
                </form>
                <p>new to Patient ? <Link to="/register">Create Account</Link></p>
             <div>------------or---------------</div>
