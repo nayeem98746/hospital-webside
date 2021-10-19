@@ -14,6 +14,7 @@ const Header = () => {
              <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/services">Services</Nav.Link>
             <Nav.Link href="/doctors">Doctors</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
             <span className="text-color"> {user?.displayName}</span>
             <img width="35px " className="p-1" src={user?.photoURL} alt="" />
            { 

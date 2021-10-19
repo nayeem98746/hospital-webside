@@ -3,7 +3,7 @@ import React from 'react';
 const Doctor = ({doctor}) => {
     const {id, name, Degree, Department,visitAmount, img} = doctor
     return (
-        <div className="pb-3">
+        <div className=" pb-3">
             <img src={img} alt="" />
             <h3>{name}</h3>
             <h2>Visit Amount:{visitAmount}$</h2>

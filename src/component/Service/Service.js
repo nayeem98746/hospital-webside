@@ -4,6 +4,9 @@ import "./Service.css";
 
 const Service = ({service}) => {
     const {id, name, amount, describtion, img} = service
+
+
+
     return (
         
             
@@ -12,7 +15,7 @@ const Service = ({service}) => {
             <h3>{name}</h3>
             <h2>Amount:{amount}$</h2>
             <p>{describtion}</p>
-            <Link><button className="btn-class">information</button></Link>
+            <Link to={`/information/${id}`} ><button className="btn-class">information{name.toLowerCase()} </button></Link>
         </div>
            
     );
