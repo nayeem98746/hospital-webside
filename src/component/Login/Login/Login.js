@@ -12,7 +12,7 @@ const Login = () => {
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
 
-    const handleEmail = (e) => {
+    const handleEmail = e => {
         setEmail(e.target.value)
     }
 
@@ -23,6 +23,7 @@ const Login = () => {
 
     const handleRegistion = e => {
         handleChangeRegister(email,password)
+        e.preventDefault()
     }
 
 
@@ -53,7 +54,7 @@ const Login = () => {
                <p>new to Patient ? <Link to="/register">Create Account</Link></p>
             <div>------------or---------------</div>
             <button 
-            onClick={singInUsingGoogle} className="btn-warning"> Google Sing In</button>
+            onClick={singInUsingGoogle} className="btn-warning rounded p-2"> Google Sing In</button>
            </div>
         </div>
     );

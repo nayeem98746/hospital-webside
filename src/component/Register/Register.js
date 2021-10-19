@@ -18,7 +18,7 @@ const Register = () => {
                 </form>
                 <p>Already have an  account ? <Link to="/login">Login</Link></p>
                 <div>------------or------------</div>
-                <button onClick={singInUsingGoogle} className="btn-warning">  Google sign in</button>
+                <button onClick={singInUsingGoogle} className="btn-warning rounded p-2">  Google sign in</button>
             </div>
         </div>
     );
