@@ -5,3 +5,17 @@
     border: 2px solid darkorange;
     color: whitesmoke;
 }
+.service{
+    background-color: aqua;
+    border-radius: 15px;
+    border: 2px solid darkslategrey;
+}
+
+.btn-class:hover{
+    background-color: darkslategrey;
+}
+.service:hover{
+    background-color: darkslategrey;
+    color: floralwhite;
+    
+}

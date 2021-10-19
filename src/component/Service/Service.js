@@ -10,10 +10,9 @@ const Service = ({service}) => {
     return (
         
             
-            <div className="service pb-3 ">
+            <div className="service pb-3  ">
             <img width="300px" src={img} alt="" />
             <h3>{name}</h3>
-            <h2>Amount:{amount}$</h2>
             <p>{describtion}</p>
             <Link to={`/information/${id}`} ><button className="btn-class">information{name.toLowerCase()} </button></Link>
         </div>

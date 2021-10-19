@@ -10,12 +10,16 @@ const Information = () => {
         .then(res=>res.json())
         .then(data => setDetails(data))
     },[])
-    const product=details.find(pd => pd.id==service)
+    const product=details.find(pd => pd.id == service)
     console.log(product)
 
     return (
         <div>
-            <h2>this is al informatioin : {service}</h2>
+            <img src={product?.img} alt="" />
+            <h2>this is all informatioin:{service}</h2>
+            <h3>Name : {product?.name}</h3>
+            <h3>Amount : {product?.amount}</h3>
+            <h3>Description : {product?.describtion}</h3>
         </div>
     );
 };
