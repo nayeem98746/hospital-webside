@@ -17,7 +17,7 @@ const Banner = () => {
     />
     <Carousel.Caption>
       <h3>Wellcome to our Hospital</h3>
-      <p>Our Hospital is renowned in this area,and Our service is vary nice</p>
+      <p>Our Hospital is renowned in this area,and Our service is vary nice.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>

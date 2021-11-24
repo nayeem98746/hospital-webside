@@ -1,4 +1,5 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/UseAuth";
 import "./Header.css"
 
@@ -11,10 +12,10 @@ const Header = () => {
           <Navbar.Brand  href="/home">SAN Hospital</Navbar.Brand>
           <Navbar.Toggle />
          <Navbar.Collapse className="justify-content-end">
-             <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/services">Services</Nav.Link>
-            <Nav.Link href="/doctors">Doctors</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
+             <Nav.Link as={Link} to="/home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/services">Services</Nav.Link>
+            <Nav.Link as={Link} to="/doctors">Doctors</Nav.Link>
+            <Nav.Link as={Link} to="/about">About</Nav.Link>
 
             <span className="text-color"> {user?.displayName}</span>
             <img width="35px " className="p-1" src={user?.photoURL} alt="" />

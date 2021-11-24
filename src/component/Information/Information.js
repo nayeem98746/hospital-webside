@@ -7,8 +7,9 @@ const Information = () => {
 
     useEffect(() => {
         fetch('/service.json')
-        .then(res=>res.json())
+        .then(res=>res.json()) 
         .then(data => setDetails(data))
+        .then(data => console.log(data))
     },[])
     const product=details.find(pd => pd.id == service)
     console.log(product)
